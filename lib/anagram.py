@@ -14,9 +14,6 @@ class Anagram:
         # Filter possible anagrams that match the normalized word
         anagrams = [word for word in possible_anagrams if normalize(word) == normalized_word]
 
-        # Remove the original word from the list of anagrams (it's not an anagram of itself)
-        anagrams = [word for word in anagrams if word.lower() != self.word]
-
         return anagrams  
            
     
